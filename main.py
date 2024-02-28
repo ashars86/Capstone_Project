@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(layout="wide")
 #load dataset
-test_df=pd.read_csv('data_capstone_new0.csv')
+test_df=pd.read_csv('https://docs.google.com/spreadsheets/d/15QN_oRbiRt2s3q-Om9_cNLiqjZp2GdwhYuBilA38Jcs/edit#gid=1715675833')
 test_df['tahun']=pd.to_datetime(test_df['tahun'])
 test_df['tahun'] = test_df['tahun'].apply(lambda x: x.strftime('%Y'))
 test_df['tahun_dum']=test_df['tahun']
