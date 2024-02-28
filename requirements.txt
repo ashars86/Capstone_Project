@@ -3,4 +3,5 @@ pandas
 altair
 seaborn
 matplotlib
+pandas-datareader
 
