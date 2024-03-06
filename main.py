@@ -94,7 +94,7 @@ df_copy_sel2=df_copy_sel1.copy()
 df_transform=df_copy_sel2.rename(columns={"jml_wisatawan":"wisatawan","jml_odtw":"odtw","jml_hotel":"hotel","Jum_Unit_Usaha_Restoran":"Usaha_Restoran","jml_pendapatan_wisata":"pendapatan_wisata"})
 df_transform['kabupaten_kota_prov']=df_transform['kabupaten_kota_prov'].str.replace('KABUPATEN','KAB')
 needed_column=['wisatawan','pendapatan_wisata']
-df_transf_sum_0=df_transform.groupby('kabupaten_kota_prov')[needed_column].mean()
+df_transf_sum_0=df_transform.groupby('kabupaten_kota_prov')[needed_column].agg({'wisatawan':'sum','pendapatan_wisata':'mean'})
 df_transf_sum_0.reset_index(inplace=True)
 df_copy3=df_transform[df_transform["tahun_dum"]==tahun_filt_1]
 df_copy3=pd.DataFrame(df_copy3[["kabupaten_kota_prov","odtw","hotel","Usaha_Restoran"]])
