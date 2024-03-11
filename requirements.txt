@@ -4,4 +4,4 @@ altair
 seaborn
 matplotlib
 pandas-datareader
-
+vega_datasets
